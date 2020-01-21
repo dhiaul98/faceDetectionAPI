@@ -29,7 +29,7 @@ import cv2
 url = "http://localhost:8000/face_detection/detect/"
 
 #define ipCam
-ipCam = "http://192.168.100.26:4747/video/"#Ganti IP kamera dengan IP kamera yang akan di gunakan
+ipCam = "http://10.122.1.62:4747/video/"#Ganti IP kamera dengan IP kamera yang akan di gunakan
 
 cap = cv2.VideoCapture(ipCam)#Jika tidak menggunakan IP camera, tetapi menggunakan USB camera, ganti ipcam dengan index dari kamera (0,1,dll)
 while True:
