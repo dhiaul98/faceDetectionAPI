@@ -5,3 +5,6 @@ Using:
 + django==1.11
 + opencv-python
 + request
+
+How to install:
++ Coming Soon
