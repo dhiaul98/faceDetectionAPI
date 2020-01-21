@@ -16,7 +16,7 @@ def detect(request):
     print(request)
 	# initialize the data dictionary to be returned by the request
     # data = {"success": False}
-    rects = [(120, 121, 122, 123),(120, 121, 122, 123),(120, 121, 122, 123)]
+    rects = [(0, 0, 0, 0)]
     data = ({"num_faces": len(rects), "faces": rects, "success": True})
     # check to see if this is a post request
     if request.method == "POST":
