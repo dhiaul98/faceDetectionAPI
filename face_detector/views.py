@@ -50,7 +50,7 @@ def detect(request):
 	# return a JSON response
     return JsonResponse(data)
  
-def _grab_image(path=None, url=None):
+def _grab_image(path=None, stream=None, url=None):
 	# if the path is not None, then load the image from disk
 	if path is not None:
 		image = cv2.imread(path)
@@ -61,6 +61,10 @@ def _grab_image(path=None, url=None):
 		if url is not None:
 			resp = urllib.request.urlopen(url)
 			data = resp.read()
+ 
+		# if the stream is not None, then the image has been uploaded
+		elif stream is not None:
+			data = stream.read()
  
 		# convert the image to a NumPy array and then read it into
 		# OpenCV format
